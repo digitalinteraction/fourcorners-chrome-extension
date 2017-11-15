@@ -1,0 +1,67 @@
+<html>
+<style>
+    html,
+    body {
+        height: 600px;
+        width: 800px;
+    }
+
+    #fce-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9900000;
+    }
+
+    #fce-overlay #fce-container {
+        width: 100%;
+        max-width: 800px;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        padding: 20px;
+
+    }
+
+    #fce-container #fce-close {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        color: #000;
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    #fce-overlay #fce-content-box {
+        background: #fff;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <script src="4c-comm.js"></script>
+    <div id="fce-overlay">
+        <div id="fce-container">
+            <iframe id="fce-content-box" src="https://editor.fourcorners.io"></iframe>
+            <div id="fce-close">&times;</div>
+        </div>
+    </div>
+</body>
+
+</html>

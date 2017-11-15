@@ -1,0 +1,24 @@
+{
+    // Required
+    "manifest_version": 2,
+    "name": "Fourcorners Editor",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "res/ico.png"
+    },
+    "content_scripts": [ {
+        "js": [ "detectImages.js" ],
+        "css": ["res/4cestyle.css"],
+        "matches": ["<all_urls>"],
+        "run_at": "document_end"
+     } ],
+     "web_accessible_resources": [
+         "res/*.png", 
+         "editor/*",
+         "editor/img/*"         
+     ],
+     "background": {
+        "scripts": ["4c-comm.js"],
+        "persistent": false
+      }
+}
